@@ -1,0 +1,35 @@
+<div class="container">
+
+    <h1 class="text-light text-center fs-1 my-5"> Mi calculadora</h1>
+
+    <!-- Mensaje Ok -->
+    <div *ngIf="mensajeOk">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{mensajeOk}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+    </div>
+
+    <!-- Mensaje Error -->
+    <div *ngIf="mensajeError">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>{{mensajeError}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+
+        <label class="text-light my-3" for="">Numero 1:</label>
+        <input type="number" class="form-control" placeholder="Ingrese el primer valor" [(ngModel)]="num1">
+
+        <label class="text-light my-3" for="">Numero 2:</label>
+        <input type="number" class="form-control" placeholder="Ingrese sus apellidos" [(ngModel)]="num2">
+
+        <label class="text-light my-3 fs-3 mt-5" for="">Resultado:</label>
+        <h1 class="text-light">{{res}}</h1>
+
+        <input type="Button" value="Sumar" class="btn btn-success my-3" (click) = sumar()>
+        <input type="Button" value="Restar" class="btn btn-danger my-3 mx-3" (click) = restar()>
+        <input type="Button" value="Multiplicar" class="btn btn-primary my-3" (click) = multiplicar()>
+        <input type="Button" value="Dividir" class="btn btn-warning my-3 mx-3" (click) = dividir()>
+
+</div>

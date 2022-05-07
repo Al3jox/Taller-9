@@ -1,0 +1,41 @@
+<div class="container text-center text-light my-5">
+    <h1> ¡Ayuda a un nuevo desarrollador! </h1>
+    <p class="fs-6 py-2 justificado">Actualmente existen muchos nuevos aspirantes a desarrollo, sin embargo, por temas económicos, falta de herramientas o falta de oportunidades. No es posible acceder a una formación que permita capacitar a los aspirantes y que puedan vincularse a una empresa</p>
+    <p class="fs-6 py-2 justificado">Ayudanos a ayudar. Cualquier apoyo que nos brindes, serán destinados a nuestro canal de YouTube y Twitch, canales por los cuales actualmente formamos a nuevos desarrolladores Webs y los ayudamos a encontrar una empresa que les dé una oportunidad</p>
+</div>
+
+<div class="container">
+        <!-- Mensaje Ok -->
+        <div *ngIf="mensajeOk">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>{{mensajeOk}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </div>
+
+        <!-- MensajeError -->
+        <div *ngIf="mensajeError">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>{{mensajeError}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+        </div>
+
+        <label class="text-light my-3" for="">Nombres Donador:</label>
+        <input type="text" class="form-control" placeholder="Ingrese sus nombres" [(ngModel)]="nombres">
+
+        <label class="text-light my-3" for="">Apellidos Donador:</label>
+        <input type="text" class="form-control" placeholder="Ingrese sus apellidos" [(ngModel)]="apellidos">
+
+        <label class="text-light my-3" for="">Edad:</label>
+        <input type="number" class="form-control" placeholder="Ingrese su edad" [(ngModel)]="edad">
+
+        <label class="text-light my-3" for="">Ciudad:</label>
+        <input type="text" class="form-control" placeholder="Ingrese su ciudad" [(ngModel)]="ciudad">
+
+        <label class="text-light my-3" for="">Cantidad a donador:</label>
+        <input type="number" class="form-control" placeholder="Ingrese la cantidad que desea donar" [(ngModel)]="cantidad">
+
+        <input type="Button" value="Donar" class="btn btn-success my-3" (click) = validarFormulario()>
+            
+</div>
